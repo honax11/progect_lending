@@ -36,6 +36,7 @@ gulp.task('styles:compile', function () {
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(rename('main.min.css'))
     .pipe(gulp.dest('build/css'));
+    
 });
 
 /* ------------ Sprite ------------- */
@@ -83,3 +84,5 @@ gulp.task('default', gulp.series(
   gulp.parallel('watch', 'server')
   )
 );
+
+
